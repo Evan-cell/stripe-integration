@@ -15,8 +15,10 @@ class ProductListView(ListView):
 
 
 class ProductCreateView(CreateView):
-    pass
-
+    model = Product
+    fields = '__all__'
+    template_name = "payments/product_create.html"
+    success_url = reverse_lazy("home")
 
 class ProductDetailView(DetailView):
     pass
