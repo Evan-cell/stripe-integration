@@ -11,7 +11,9 @@ import json
 # Create your views here.
 
 class ProductListView(ListView):
-    pass
+    model = Product
+    template_name = "payments/product_list.html"
+    context_object_name = 'product_list'
 
 
 class ProductCreateView(CreateView):
